@@ -1,0 +1,364 @@
+*{
+  margin: 0;
+  padding: 0;
+  font-family: "Geist", sans-serif;
+}
+
+:root {
+  --color-background: #080808;
+  --color-text: #FFF;
+  --color-text-black: #000000;
+  --color-secundaire:#99F650;
+  --fontsize-nav: 1.3rem;
+  --fontsize-nav-icon: 1.5rem;
+}
+
+header{
+  background-color: black;
+  padding-bottom: 7em;
+}
+
+h1{
+  font-size: 2.5em;
+  font-weight: bold;
+}
+
+p{
+  font-size: 1em;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 2em;
+} 
+
+nav ul{
+  background: #080808;
+  position: fixed;
+  top: 0;
+  right: -15rem;
+  width: 50vw;
+  height: 100vh;
+  padding-top: 7em;
+  z-index: 101;
+  transition: right .5s;
+  display: flex;
+  flex-direction: column;
+  gap: 3em;
+  align-items: center;
+}
+
+.sidemenu{
+  right: 0;
+}
+
+nav ul li{
+  list-style: none;
+}
+
+nav ul li a{
+  color: var(--color-text);
+  text-decoration: none;
+  font-size: var(--fontsize-nav);
+  position: relative;
+}
+
+nav ul li a::after{
+  content: '';
+  width: 0;
+  height: 3px;
+  background: var(--color-secundaire);
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  transition: .5s;
+}
+
+nav ul li a:hover::after{
+  width: 100%;
+}
+
+nav ul .fas{
+  position: absolute;
+  top: 2rem;
+  right: 3rem;
+  cursor: pointer;
+  font-size: var(--fontsize-nav-icon); 
+}
+
+nav > i {
+  font-size: var(--fontsize-nav-icon);
+  cursor: pointer;
+}
+
+/* hamburger menu */
+        .hamburger {
+          width: 35px;
+          height: 30px;
+          cursor: pointer;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          position: relative;
+          z-index: 1001;
+      }
+
+      /* Hamburger lijnen */
+      .bar {
+          width: 100%;
+          height: 4px;
+          background-color: var(--color-secundaire);
+          border-radius: 2px;
+          transition: all 0.4s ease;
+          position: absolute;
+          left: 0;
+      }
+
+      /* Posities van de lijnen */
+      .bar1 {
+          top: 0;
+      }
+
+      .bar2 {
+          top: 12px;
+      }
+
+      .bar3 {
+          top: 24px;
+      }
+
+      /* Animatie bij activeren */
+      .hamburger.active .bar1 {
+          transform: rotate(45deg);
+          top: 12px;
+      }
+
+      .hamburger.active .bar2 {
+          opacity: 0;
+      }
+
+      .hamburger.active .bar3 {
+          transform: rotate(-45deg);
+          top: 12px;
+      }
+
+      /* hero-section */
+      .hero-section{
+        padding: 2em;
+        display: flex;
+        flex-direction: column;
+        gap: 2em;
+        align-items: center;
+      }
+
+      .wrapper{
+        display: flex;
+        flex-direction: column;
+        gap: 2em;
+      }
+
+      .text-wrapper{
+        color: white;
+        display: flex;
+        flex-direction: column;
+        gap: 2em;
+      }
+
+      .hero-section img{
+        width: 100%;
+      }
+
+
+      /* form styling */
+      input[type=text],input[type=email], select {
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+      }
+      
+      input[type=submit] {
+        width: 100%;
+        background-color: var(--color-secundaire);
+        color: var(--color-text-black);
+        padding: 14px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 1em;
+        font-weight: bold;
+      }
+      
+      input[type=submit]:hover {
+        background-color: var(--color-text);
+      }
+      
+      label{
+        color: var(--color-text);
+      }
+
+      /* footer styling */
+
+      footer{
+        padding: 2em;
+        display: flex;
+        flex-direction: column;
+        gap: 2em;
+      }
+
+      .footer-link-wrapper{
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+      }
+
+      footer ul:nth-of-type(1){
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+      }
+
+      footer ul:nth-of-type(2){
+        display: flex;
+        gap: 1em;
+      }
+
+      footer ul li{
+        list-style: none;
+      }
+      
+      footer ul li a{
+        text-decoration: none;
+        color: black;
+        font-size: 14px;
+      }
+
+      footer ul:nth-of-type(1) li a:hover{
+        text-decoration: underline;
+        color: #99F650;
+      }
+
+      footer ul:nth-of-type(2) li a{
+        text-decoration: none;
+        color: black;
+        display: inline-block;
+        width: 48px; /* Zorg dat dit overeenkomt met de afbeeldinggrootte */
+        height: 48px;
+        background-size: contain;
+        background-repeat: no-repeat;
+      }
+
+      .image-instagram{
+        background-image: url(../images/icons8-instagram-48-black.png);
+      }
+      .image-facebook{
+        background: url(../images/icons8-facebook-48\(1\).png)
+      }
+      .image-linkdin{
+        background: url(../images/icons8-linkedin-logo-48\(1\).png)
+      }
+
+      .image-instagram:hover{
+        background-image: url(../images/icons8-instagram-48.png);
+      }
+      .image-facebook:hover{
+        background: url(../images/icons8-facebook-48.png)
+      }
+      .image-linkdin:hover{
+        background: url(../images/icons8-linkedin-logo-48.png)
+      }
+
+      @media (width > 450px){
+        .hamburger{
+          display: none;
+        }
+        
+        nav ul{
+          position: initial;
+          width: auto;
+          height: auto;
+          padding-top: 0;
+          background: transparent;
+          flex-direction: row;
+        }
+
+        nav ul li a{
+          color: white;
+        }
+      }
+
+      @media (width > 1000px){
+        header{
+          height: 100vh;
+        }
+        nav{
+          padding: 2em 3em 2em 3em;
+        }
+
+        nav ul{
+          gap: 3em;
+        }
+
+        .hero-section{
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+        }
+
+        .hero-section img{
+          order: 1;
+        }
+        .form-wrapper{
+          display: grid;
+          grid-template-columns: .7fr 1fr;
+          grid-gap: 1em;
+        }
+
+        .hero-section{
+          padding: 6em 3em 2em 3em;
+        }
+
+        input[type=submit] {
+          width: 40%;
+        }
+
+        .footer-link-wrapper{
+          flex-direction: row;
+          justify-content: space-between;
+        }
+
+        footer ul:nth-of-type(1){
+          flex-direction: row;
+          align-items: center;
+        }
+
+        footer{
+          padding: 2em 3em 2em 3em;
+        }
+    }
+
+      @media (width > 1600px){
+        p{
+          font-size: 1.2em;
+        }
+        nav{
+          padding: 2em 5em 2em 5em;
+        }
+
+        .hero-section{
+          padding: 6em 5em 2em 5em;
+          gap: 3em;
+        }
+        h1{
+          font-size: 3em;
+        }
+        
+        footer{
+          padding: 2em 5em 2em 5em;
+        }
+      }
