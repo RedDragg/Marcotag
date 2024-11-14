@@ -5,17 +5,17 @@
 }
 
 :root {
-  --color-background: #080808;
+  --color-background: #010c14;
   --color-text: #FFF;
   --color-text-black: #000000;
   --color-secundaire:#99F650;
   --fontsize-nav: 1.3rem;
   --fontsize-nav-icon: 1.5rem;
+  --color-background-footer: #f5f7fa;
 }
 
 header{
-  background-color: black;
-  padding-bottom: 7em;
+  background-color: var(--color-background);
 }
 
 h1{
@@ -152,6 +152,7 @@ nav > i {
         flex-direction: column;
         gap: 2em;
         align-items: center;
+        background-color: var(--color-background);
       }
 
       .wrapper{
@@ -173,6 +174,9 @@ nav > i {
 
 
       /* form styling */
+      .form{
+        padding-top: 2em;
+      }
       input[type=text],input[type=email], select {
         width: 100%;
         padding: 12px 20px;
@@ -189,7 +193,7 @@ nav > i {
         color: var(--color-text-black);
         padding: 14px 20px;
         border: none;
-        border-radius: 4px;
+        border-radius: 5em;
         cursor: pointer;
         font-size: 1em;
         font-weight: bold;
@@ -203,6 +207,75 @@ nav > i {
         color: var(--color-text);
       }
 
+
+      /* thankyou styling */
+      .tysocial{
+        display: flex;
+        list-style: none;
+        align-items: center;
+        gap: 1em;
+      }
+
+      .thankyou-section{
+        background-color: var(--color-background-footer);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 3em;
+        text-align: center;
+        padding: 4em 2em 4em 2em;
+      }
+
+      .thankyou-text-wrapper{
+        font-size: 1em;
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+      }
+
+      .ty-button{
+        background-color: var(--color-secundaire);
+        border-radius: 5em;
+        color: black;
+        text-decoration: none;
+        cursor: pointer;
+        font-weight: bold;
+        width: 100%;
+        padding: 1em 0 1em 0;
+      }
+
+      .thankyou-text-wrapper p span{
+        text-transform: uppercase;
+        font-weight: bold;
+      }
+
+      .thankyou-h1{
+        letter-spacing: 5px;
+        text-transform: uppercase;
+        font-size: 4em;
+      }
+
+      .thankyou-links{
+        display: flex;
+        flex-direction: column;
+        gap: 2em;
+      }
+
+      .thankyou-links-socials{
+        border-top: black solid 2px;
+        padding-top: 2em;
+        display: flex;
+        flex-direction: column;
+        gap: 2em;
+      }
+
+      .vertical-line-ty{
+        width: 5px;
+        height: 100%;
+        color: #000000;
+        background-color: #000000;
+      }
+
       /* footer styling */
 
       footer{
@@ -210,6 +283,7 @@ nav > i {
         display: flex;
         flex-direction: column;
         gap: 2em;
+        background-color: var(--color-background-footer);
       }
 
       .footer-link-wrapper{
@@ -227,6 +301,7 @@ nav > i {
       footer ul:nth-of-type(2){
         display: flex;
         gap: 1em;
+        align-items: center;
       }
 
       footer ul li{
@@ -235,43 +310,64 @@ nav > i {
       
       footer ul li a{
         text-decoration: none;
-        color: black;
+        color: var(--color-text-black);
         font-size: 14px;
       }
 
       footer ul:nth-of-type(1) li a:hover{
         text-decoration: underline;
-        color: #99F650;
+        color: var(--color-secundaire);
       }
 
-      footer ul:nth-of-type(2) li a{
+      .sociallinks li a{
         text-decoration: none;
-        color: black;
+        color: var(--color-text-black);
         display: inline-block;
-        width: 48px; /* Zorg dat dit overeenkomt met de afbeeldinggrootte */
-        height: 48px;
         background-size: contain;
         background-repeat: no-repeat;
       }
 
+      .sociallinks li:nth-of-type(1) a{
+        width: 36px;
+        height: 36px;
+      }
+
+      .sociallinks li:nth-of-type(2) a,
+      .sociallinks li:nth-of-type(3) a{
+        width: 30px;
+        height: 30px;
+      }
+
+      footer p{
+        font-size: .8em;
+      }
+
+
       .image-instagram{
-        background-image: url(../images/icons8-instagram-48-black.png);
+        background-image: url(../images/instagram-black.png);
       }
       .image-facebook{
-        background: url(../images/icons8-facebook-48\(1\).png)
+        background: url(../images/facebook-black.png)
       }
       .image-linkdin{
-        background: url(../images/icons8-linkedin-logo-48\(1\).png)
+        background: url(../images/linkdin-black.png)
       }
 
       .image-instagram:hover{
-        background-image: url(../images/icons8-instagram-48.png);
+        background-image: url(../images/instagram-icon.png);
       }
       .image-facebook:hover{
-        background: url(../images/icons8-facebook-48.png)
+        background: url(../images/facebook-icon.png)
       }
       .image-linkdin:hover{
-        background: url(../images/icons8-linkedin-logo-48.png)
+        background: url(../images/linkdin-icon.png)
+      }
+
+      @media (width < 450px){
+        .thankyou-h1{
+          font-size: 2em;
+        }
+
       }
 
       @media (width > 450px){
@@ -293,10 +389,13 @@ nav > i {
         }
       }
 
-      @media (width > 1000px){
-        header{
-          height: 100vh;
+      @media (width > 650px){
+        .ty-button{
+          width: 32em;
         }
+      }
+
+      @media (width > 1000px){
         nav{
           padding: 2em 3em 2em 3em;
         }
@@ -308,19 +407,18 @@ nav > i {
         .hero-section{
           display: grid;
           grid-template-columns: 1fr 1fr;
+          background-color: var(--color-background);
+          padding: 6em 3em 10em 3em;
         }
 
         .hero-section img{
           order: 1;
         }
+
         .form-wrapper{
           display: grid;
           grid-template-columns: .7fr 1fr;
           grid-gap: 1em;
-        }
-
-        .hero-section{
-          padding: 6em 3em 2em 3em;
         }
 
         input[type=submit] {
@@ -351,7 +449,7 @@ nav > i {
         }
 
         .hero-section{
-          padding: 6em 5em 2em 5em;
+          padding: 6em 5em 10em 5em;
           gap: 3em;
         }
         h1{
