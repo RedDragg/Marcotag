@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Sticky Navbar</title>
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo"><img src="images/Opio-logo.png" alt="OpioLimits logo"></div>
+        <button class="hamburger" aria-label="Toggle navigation">
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+        </button>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="overons.html">Over ons</a></li>
+        </ul>
+    </nav>
+
+    <section class="contact-wrapper">
+        	<ul>
+                <li>
+                    <h1>Kom in contact met onze team</h1>
+                        <form action="/action_page.php" class="contactform-wrapper">
+                            <label for="name">Naam<input type="name" id="contact-name" name="name" placeholder="Je naam.."></label>
+                            <label for="email">Email<input type="email" id="contact-email" name="email" placeholder="Je email.."></label>
+                            <label for="text">Bericht<textarea id="textarea" name="textarea" placeholder="tekst.."></textarea></label>
+                            
+                            <input type="submit" value="Submit" id="contact-submit">
+                          </form>
+                </li>
+                <li>
+                    <h2>CONTACT DETAILS</h2>
+                    <ul class="contact-details-wrapper">
+                        <li>
+                            <h3>Opiolimits</h3>
+                            <p>Amstelcampus, 1091 GC Amsterdam</p>
+                        </li>
+                        <li>
+                            <p class="underline">Voor zakelijke vragen</p>
+                            <p>+316 40368521</p>
+                            <p>Opiolimits@gmail.nl</p>
+                        </li>
+                        <li>
+                            <p class="underline">Klantenservice</p>
+                            <p>Opiolimits@gmail.nl</p>
+                        </li>
+                        <li>
+                            <p class="underline">socials</p>
+                            <ul class="sociallinks">
+                                <li><a href="#" class="image-instagram"></a></li>
+                                <li><a href="#" class="image-facebook"></a></li>
+                                <li><a href="#" class="image-linkdin"></a></li>
+                              </ul>
+                              
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+    </section>
+
+    <footer>
+        <div class="footer-link-wrapper">
+          <ul>
+            <li><a href="#">Home</a></li> 
+            <li><a href="#">Over Ons</a></li> 
+            <li><a href="#">Contact</a></li> 
+          </ul>
+
+          <ul class="sociallinks">
+            <li><a href="#" class="image-instagram"></a></li>
+            <li><a href="#" class="image-facebook"></a></li>
+            <li><a href="#" class="image-linkdin"></a></li>
+          </ul>
+        </div>
+        <p>© 2024 Company name. All rights reserved</p>
+      </footer>
+    <script src="js/script.js"></script>
+</body>
+</html>
